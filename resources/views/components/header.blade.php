@@ -5,8 +5,5 @@
                 POSTCARDS
             </h1>
         </div>
-        <div class="row justify-content-center py-3">
-            <a href="{{route('create.postcard')}}" class="btn btn-primary">CREATE NEW POSTCARD</a>
-        </div>
     </div>
 </header>
