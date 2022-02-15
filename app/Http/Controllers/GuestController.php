@@ -21,18 +21,18 @@ class GuestController extends Controller
                 'sender'=>'required|string',
                 'address'=>'required|string',
                 'text'=>'required|string',
-                'image'=>'required|image',
+                // 'image'=>'required|image',
             ]
         );
 
         // prendo il file immagine
-        $imageFile = $data['image']; //$request->file('image');
+        $imageFile = $request->file('image'); //$data['image'];
 
         // imposto il nome del file come salvarlo
         $imageName = rand(100000, 999999).'_'.time().'.'.$imageFile->getClientOriginalExtension();
-        
+
         // salvo il file nella cartella /postcards/, utilizzando il nome $name, partendo dalla cartella public
-        $imageFile ->storeAs('/postacards/',$imageName ,'public');
+        $imageFile ->storeAs('/postcards/',$imageName ,'public');
 
         $data['image']=$imageName;
         $postcard = Postcard::create($data);

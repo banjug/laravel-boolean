@@ -37647,11 +37647,12 @@ var render = function () {
             _vm._v(" "),
             postcard.image
               ? _c("div", { staticClass: "card-body" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(postcard.image) +
-                      "\n                "
-                  ),
+                  _c("img", {
+                    attrs: {
+                      src: "/storage/postcards/" + postcard.image,
+                      alt: "",
+                    },
+                  }),
                 ])
               : _c("div", { staticClass: "card-body" }, [
                   _vm._v("\n                    No image.\n                "),

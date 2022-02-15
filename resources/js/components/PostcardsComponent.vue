@@ -12,13 +12,13 @@
                         {{postcard.text}}
                     </div>
                     <div v-if="postcard.image" class="card-body">
-                        {{postcard.image}}
+                        <img :src="'/storage/postcards/' + postcard.image" alt="">
                     </div>
                     <div v-else class="card-body">
                         No image.
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 </template>
